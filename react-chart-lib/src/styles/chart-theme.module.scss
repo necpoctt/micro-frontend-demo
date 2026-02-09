@@ -1,0 +1,8 @@
+/* [修正] 使用 'as vars' 明確指定變數來源 */
+@use './variables.scss' as vars;
+
+:export {
+  /* 使用 vars.$變數名 來讀取 */
+  actualDemand: vars.$chart-actual-demand;
+  contractCapacity: vars.$chart-contract-capacity;
+}

@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Subtask A: React Chart</title>
+  </head>
+  <body>
+    <div style="height: 400px; width: 800px; margin: 20px auto">
+      <remote-react-chart id="chart" config='{"contractCapacity": 400}'></remote-react-chart>
+    </div>
+
+    <script type="module" src="/src/main.tsx"></script>
+
+    <script>
+      // 模擬傳入數據
+      const chart = document.getElementById('chart');
+      const mockData = [
+        { time: '00:00', power: 120, temperature: 20 },
+        { time: '01:00', power: 180, temperature: 22 },
+        { time: '02:00', power: 250, temperature: 25 },
+        { time: '03:00', power: 224, temperature: 31 },
+        { time: '04:00', power: 160, temperature: 28 },
+      ];
+      // 透過 JS 設定屬性模擬動態資料
+      chart.setAttribute('chart-data', JSON.stringify(mockData));
+    </script>
+  </body>
+</html>

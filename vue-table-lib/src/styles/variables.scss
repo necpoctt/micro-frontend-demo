@@ -1,0 +1,24 @@
+// ==========================================
+// Design Tokens
+// ==========================================
+
+// 停用 (Gray)
+$status-disabled-bg: #f5f5f5;
+$status-disabled-text: #8c8c8c;
+
+// 保養中 (Blue)
+$status-maintenance-bg: #e6f7ff;
+$status-maintenance-text: #1890ff;
+
+// 故障 (Red)
+$status-fault-bg: #fff1f0;
+$status-fault-text: #f5222d;
+
+// 可借用 (Green)
+$status-active-bg: #f6ffed;
+$status-active-text: #52c41a;
+
+//已預約
+$status-reserved-bg: #e6f7ff;
+$status-reserved-text: #1890ff;
+
