@@ -1,5 +1,5 @@
 # React + TypeScript + Vite
 
-Module Federation
+react-chart-lib
 
 export react-chart-lib echarts

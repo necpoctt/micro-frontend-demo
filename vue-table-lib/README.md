@@ -1,7 +1,5 @@
 # Vue 3 + TypeScript + Vite
 
-# React + TypeScript + Vite
-
-Module Federation
+vue-table-lib
 
 export vue-table-lib ant-design-vue
