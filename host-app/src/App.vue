@@ -10,8 +10,8 @@
           <h2>用電分析</h2>
         </div>
         <div class="chart-container">
-          <remote-react-chart style="width: 100%; display: block;" :chart-data="JSON.stringify(mockChartData)"
-            :config="JSON.stringify(chartConfig)"></remote-react-chart>
+          <remote-electricity-chart style="width: 100%; display: block;" :chart-data="JSON.stringify(mockChartData)"
+            :config="JSON.stringify(chartConfig)"></remote-electricity-chart>
         </div>
       </section>
 
@@ -24,6 +24,9 @@
             :status-config="JSON.stringify(statusConfig)" @row-action="handleRowAction"></remote-vue-table>
         </div>
       </section>
+
+      <remote-pie-chart :chart-data="JSON.stringify(pieChartdata)"
+        :config="JSON.stringify(pieChartConfig)"></remote-pie-chart>
     </main>
   </div>
 </template>
@@ -76,6 +79,18 @@ const mockChartData = [
 const handleRowAction = (event: Event) => {
   const { row, action } = (event as CustomEvent).detail;
   console.log(action, row);
+};
+
+const pieChartdata = [
+  { name: '空調主機', value: 4500 },
+  { name: '照明設備', value: 1200 },
+  { name: '動力設備', value: 2800 },
+  { name: '插座用電', value: 1500 },
+];
+
+const pieChartConfig = {
+  title: '今日能耗分佈',
+  unit: 'kWh',
 };
 </script>
 

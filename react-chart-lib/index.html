@@ -6,8 +6,20 @@
   </head>
   <body>
     <div style="height: 400px; width: 800px; margin: 20px auto">
-      <remote-react-chart id="chart" config='{"contractCapacity": 400}'></remote-react-chart>
+      <remote-electricity-chart id="chart" config='{"contractCapacity": 400}'></remote-electricity-chart>
     </div>
+    <remote-pie-chart
+      chart-data='[
+    {"name": "空調主機", "value": 4500},
+    {"name": "照明設備", "value": 1200},
+    {"name": "動力設備", "value": 2800},
+    {"name": "插座用電", "value": 1500}
+  ]'
+      config='{
+    "title": "今日能耗分佈",
+    "unit": "kWh"
+  }'
+    ></remote-pie-chart>
 
     <script type="module" src="/src/main.tsx"></script>
 
